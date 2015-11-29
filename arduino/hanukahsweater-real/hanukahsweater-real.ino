@@ -28,10 +28,10 @@
 
 #define FACTORYRESET_ENABLE         0
 #define MINIMUM_FIRMWARE_VERSION    "0.6.6"
-#define MODE_LED_BEHAVIOUR          "MODE"
+#define MODE_LED_BEHAVIOUR          "DISABLE"
 #define BLUEFRUIT_UART_MODE_PIN      -1  //needed for Flora setup
-    
-int hanukahDay = 1;
+
+int hanukahDay = 0;
 
 
 
@@ -71,25 +71,25 @@ int hanukahDay = 1;
 //   NEO_RGB     Pixels are wired for RGB bitstream (v1 FLORA pixels, not v2)
 #define PIN 6 // Pin that NeoPixel strip is connected to
 #define SPEAKER 3 // Pin that speaker is connected to
-#define NUM_PIXELS 6
+#define NUM_PIXELS 9
 #define ONBOARD_LED 7
 
 // Global inits
 // Init the neopixel
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_PIXELS, PIN, NEO_GRB + NEO_KHZ800);
-Adafruit_BluefruitLE_UART ble(Serial1, BLUEFRUIT_UART_MODE_PIN);
+                              Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_PIXELS, PIN, NEO_GRB + NEO_KHZ800);
+                              Adafruit_BluefruitLE_UART ble(Serial1, BLUEFRUIT_UART_MODE_PIN);
 
 
-long vel = 20000;
-boolean hasplayed = false;
+                              long vel = 20000;
+                              boolean hasplayed = false;
 int menorah[9]={0,0,0,0,0,0,0,0,0};  // track whether the candles are on or off
- 
- 
+
+
 /************
  * more bluetooth setup code
  ************/
 // A small helper
-void error(const __FlashStringHelper*err) {
+ void error(const __FlashStringHelper*err) {
   Serial.println(err);
   while (1);
 }
@@ -102,13 +102,13 @@ void printHex(const uint8_t * data, const uint32_t numBytes);
 // the packet buffer
 extern uint8_t packetbuffer[];
 
- 
- 
- 
+
+
+
 void setup() {
  // while (!Serial);  // required for Flora & Micro
  //   delay(500);
- 
+
   // just for debugging, set up onboard led
   pinMode(ONBOARD_LED, OUTPUT);
   digitalWrite(ONBOARD_LED,HIGH);   // turn the LED on (HIGH is the voltage level)
@@ -137,6 +137,14 @@ void setup() {
     delay(500);
   }
   
+  // LED Activity command is only supported from 0.6.6
+  if ( ble.isVersionAtLeast(MINIMUM_FIRMWARE_VERSION) )
+  {
+    // Change Mode LED Activity
+    Serial.println(F("Change LED activity to " MODE_LED_BEHAVIOUR));
+    ble.sendCommandCheckOK("AT+HWModeLED=" MODE_LED_BEHAVIOUR);
+  }
+  
   /* Disable command echo from Bluefruit */
   ble.echo(false);
 
@@ -159,13 +167,13 @@ void playsong() {
   for (int i=0; i<50; i++) {
     int tom = melod[i];
     int tempo = ritmo[i];
- 
+
     long tvalue = tempo * vel;
 
     tocar(tom, tvalue);
 
     delayMicroseconds(1000);
-  }	    delay(1000);
+  }     delay(1000);
 
   hasplayed = true;
 }
@@ -175,15 +183,26 @@ void tocar(int tom, long tempo_value) {
   while (tempo_gasto < tempo_value) {
     digitalWrite(SPEAKER, HIGH);
     delayMicroseconds(tom / 2);
- 
+
     digitalWrite(SPEAKER, LOW);
-    delayMicroseconds(tom/2);	 
+    delayMicroseconds(tom/2);  
     tempo_gasto += tom;
   }
 }
 
 void loop() {
-  // check serial port for what night it is
+   // flicker the lit pixels
+   for(int i=0; i< hanukahDay; i++) {
+      if(i != 4) {
+        int c = random(64,192);
+        strip.setPixelColor(i, 255, c, 0);
+        Serial.println("Setting pixel to green value");
+        Serial.println(i);
+        Serial.println(c);
+      }
+   }
+  strip.show();
+  // check bluetooth keypress port for what night it is
   uint8_t len = readPacket(&ble, BLE_READPACKET_TIMEOUT);
   if (len == 0) return;
 
@@ -197,17 +216,17 @@ void loop() {
     Serial.print ("Button "); Serial.print(buttnum);
     if (pressed) {
       Serial.println(" pressed");
-       digitalWrite(ONBOARD_LED,HIGH);   // turn the LED on (HIGH is the voltage level)
+       // digitalWrite(ONBOARD_LED,HIGH);   // turn the LED on (HIGH is the voltage level)
     } else {
       Serial.println(" released");
-      digitalWrite(ONBOARD_LED,LOW);   // turn the LED on (HIGH is the voltage level)
+      // digitalWrite(ONBOARD_LED,LOW);   // turn the LED on (HIGH is the voltage level)
       hanukahDay = buttnum;
-    
-    if (hanukahDay > NUM_PIXELS) {
-         hanukahDay = NUM_PIXELS ;
-       }
-       Serial.println(hanukahDay);
-    if (hanukahDay >=4) {
+
+      if (hanukahDay > NUM_PIXELS) {
+       hanukahDay = NUM_PIXELS ;
+     }
+     Serial.println(hanukahDay);
+     if (hanukahDay >=4) {
       hanukahDay++;
     }
 
@@ -220,84 +239,35 @@ void loop() {
     delay(250);
 
     for(int i=0; i < hanukahDay; i++) {
-        if(i != 4) {
-          menorah[i] = 1;
-          strip.setPixelColor(i, 255, 128, 0);
-          delay(250);
-        }
-        strip.show();
-        Serial.println ("lighting LED");
-        Serial.println(i);
-
-    }
-    
-  }
-  }
- 
-  if (Serial.available()) {
-    char c = Serial.read(); // get a byte from serial buffer
-    int i = c - '0';
-    Serial.println("got a number: ");
-    hanukahDay = i;
-    Serial.println(hanukahDay);
-
-    // do some boundary checking
-    if(hanukahDay == 0) {
-      playsong();
-      return;
-    }
-    
-    if (hanukahDay < 0) {
-      hanukahDay = 1;
-    }
-    if (hanukahDay > NUM_PIXELS) {
-       hanukahDay = NUM_PIXELS ;
-    }
-    Serial.println(hanukahDay);
-    if (hanukahDay >=4) {
-      hanukahDay++;
-    }
-
-    // reset the menorah and light the shamash
-    alloff();
-    strip.show();
-    delay(250);
-    strip.setPixelColor(4, 255, 0, 0);
-    strip.show();
-    delay(250);
-
-    for(i=0; i < hanukahDay; i++) {
-        if(i != 4) {
-          menorah[i] = 1;
-          strip.setPixelColor(i, 255, 128, 0);
-          delay(250);
-        }
-        strip.show();
-        Serial.println ("lighting LED");
-        Serial.println(i);
-
-    }
-  } else {
-    // flicker 
-    for(int i=0; i< hanukahDay; i++) {
-      if((i != 4) && (menorah[i] != 0)) {
-        int c = random(64,192);
-        strip.setPixelColor(i, 255, c, 0);
+      if(i != 4) {
+        menorah[i] = 1;
+        strip.setPixelColor(i, 255, 128, 0);
+        delay(250);
       }
-    } 
-    strip.show();
-    delay(100);
+      strip.show();
+      Serial.println ("lighting LED");
+      Serial.println(i);
+
+      }
+
+    }
   }
+
+
+    // flicker 
+ 
+  //delay(100);
+
 }
 
 
 
 void alloff() {
-      for(int i=0; i < NUM_PIXELS; i++) {
-        menorah[i] = 0;
-        strip.setPixelColor(i, 0, 0, 0);
-        Serial.println ("off LED");
-        Serial.println(i);
-      }
+  for(int i=0; i < NUM_PIXELS; i++) {
+    menorah[i] = 0;
+    strip.setPixelColor(i, 0, 0, 0);
+    Serial.println ("off LED");
+    Serial.println(i);
+  }
 }
-  
+
