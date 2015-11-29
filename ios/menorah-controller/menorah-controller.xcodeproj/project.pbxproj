@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC173ED71C0A88B100345E1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC173ED61C0A88B100345E1B /* main.m */; };
+		FC173EDA1C0A88B100345E1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC173ED91C0A88B100345E1B /* AppDelegate.m */; };
+		FC173EDD1C0A88B100345E1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC173EDC1C0A88B100345E1B /* ViewController.m */; };
+		FC173EE01C0A88B100345E1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC173EDE1C0A88B100345E1B /* Main.storyboard */; };
+		FC173EE21C0A88B100345E1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC173EE11C0A88B100345E1B /* Assets.xcassets */; };
+		FC173EE51C0A88B100345E1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC173EE31C0A88B100345E1B /* LaunchScreen.storyboard */; };
+		FC173EF01C0A88B100345E1B /* menorah_controllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC173EEF1C0A88B100345E1B /* menorah_controllerTests.m */; };
+		FC173EFB1C0A88B100345E1B /* menorah_controllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC173EFA1C0A88B100345E1B /* menorah_controllerUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC173EEC1C0A88B100345E1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC173ECA1C0A88B100345E1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC173ED11C0A88B100345E1B;
+			remoteInfo = "menorah-controller";
+		};
+		FC173EF71C0A88B100345E1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC173ECA1C0A88B100345E1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC173ED11C0A88B100345E1B;
+			remoteInfo = "menorah-controller";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC173ED21C0A88B100345E1B /* menorah-controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "menorah-controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC173ED61C0A88B100345E1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FC173ED81C0A88B100345E1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FC173ED91C0A88B100345E1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FC173EDB1C0A88B100345E1B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FC173EDC1C0A88B100345E1B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FC173EDF1C0A88B100345E1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC173EE11C0A88B100345E1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC173EE41C0A88B100345E1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC173EE61C0A88B100345E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC173EEB1C0A88B100345E1B /* menorah-controllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "menorah-controllerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC173EEF1C0A88B100345E1B /* menorah_controllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = menorah_controllerTests.m; sourceTree = "<group>"; };
+		FC173EF11C0A88B100345E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC173EF61C0A88B100345E1B /* menorah-controllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "menorah-controllerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC173EFA1C0A88B100345E1B /* menorah_controllerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = menorah_controllerUITests.m; sourceTree = "<group>"; };
+		FC173EFC1C0A88B100345E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC173ECF1C0A88B100345E1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC173EE81C0A88B100345E1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC173EF31C0A88B100345E1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC173EC91C0A88B100345E1B = {
+			isa = PBXGroup;
+			children = (
+				FC173ED41C0A88B100345E1B /* menorah-controller */,
+				FC173EEE1C0A88B100345E1B /* menorah-controllerTests */,
+				FC173EF91C0A88B100345E1B /* menorah-controllerUITests */,
+				FC173ED31C0A88B100345E1B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC173ED31C0A88B100345E1B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC173ED21C0A88B100345E1B /* menorah-controller.app */,
+				FC173EEB1C0A88B100345E1B /* menorah-controllerTests.xctest */,
+				FC173EF61C0A88B100345E1B /* menorah-controllerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC173ED41C0A88B100345E1B /* menorah-controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC173ED81C0A88B100345E1B /* AppDelegate.h */,
+				FC173ED91C0A88B100345E1B /* AppDelegate.m */,
+				FC173EDB1C0A88B100345E1B /* ViewController.h */,
+				FC173EDC1C0A88B100345E1B /* ViewController.m */,
+				FC173EDE1C0A88B100345E1B /* Main.storyboard */,
+				FC173EE11C0A88B100345E1B /* Assets.xcassets */,
+				FC173EE31C0A88B100345E1B /* LaunchScreen.storyboard */,
+				FC173EE61C0A88B100345E1B /* Info.plist */,
+				FC173ED51C0A88B100345E1B /* Supporting Files */,
+			);
+			path = "menorah-controller";
+			sourceTree = "<group>";
+		};
+		FC173ED51C0A88B100345E1B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC173ED61C0A88B100345E1B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC173EEE1C0A88B100345E1B /* menorah-controllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC173EEF1C0A88B100345E1B /* menorah_controllerTests.m */,
+				FC173EF11C0A88B100345E1B /* Info.plist */,
+			);
+			path = "menorah-controllerTests";
+			sourceTree = "<group>";
+		};
+		FC173EF91C0A88B100345E1B /* menorah-controllerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC173EFA1C0A88B100345E1B /* menorah_controllerUITests.m */,
+				FC173EFC1C0A88B100345E1B /* Info.plist */,
+			);
+			path = "menorah-controllerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC173ED11C0A88B100345E1B /* menorah-controller */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC173EFF1C0A88B100345E1B /* Build configuration list for PBXNativeTarget "menorah-controller" */;
+			buildPhases = (
+				FC173ECE1C0A88B100345E1B /* Sources */,
+				FC173ECF1C0A88B100345E1B /* Frameworks */,
+				FC173ED01C0A88B100345E1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "menorah-controller";
+			productName = "menorah-controller";
+			productReference = FC173ED21C0A88B100345E1B /* menorah-controller.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC173EEA1C0A88B100345E1B /* menorah-controllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC173F021C0A88B100345E1B /* Build configuration list for PBXNativeTarget "menorah-controllerTests" */;
+			buildPhases = (
+				FC173EE71C0A88B100345E1B /* Sources */,
+				FC173EE81C0A88B100345E1B /* Frameworks */,
+				FC173EE91C0A88B100345E1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC173EED1C0A88B100345E1B /* PBXTargetDependency */,
+			);
+			name = "menorah-controllerTests";
+			productName = "menorah-controllerTests";
+			productReference = FC173EEB1C0A88B100345E1B /* menorah-controllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FC173EF51C0A88B100345E1B /* menorah-controllerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC173F051C0A88B100345E1B /* Build configuration list for PBXNativeTarget "menorah-controllerUITests" */;
+			buildPhases = (
+				FC173EF21C0A88B100345E1B /* Sources */,
+				FC173EF31C0A88B100345E1B /* Frameworks */,
+				FC173EF41C0A88B100345E1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC173EF81C0A88B100345E1B /* PBXTargetDependency */,
+			);
+			name = "menorah-controllerUITests";
+			productName = "menorah-controllerUITests";
+			productReference = FC173EF61C0A88B100345E1B /* menorah-controllerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC173ECA1C0A88B100345E1B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = wikia;
+				TargetAttributes = {
+					FC173ED11C0A88B100345E1B = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					FC173EEA1C0A88B100345E1B = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = FC173ED11C0A88B100345E1B;
+					};
+					FC173EF51C0A88B100345E1B = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = FC173ED11C0A88B100345E1B;
+					};
+				};
+			};
+			buildConfigurationList = FC173ECD1C0A88B100345E1B /* Build configuration list for PBXProject "menorah-controller" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC173EC91C0A88B100345E1B;
+			productRefGroup = FC173ED31C0A88B100345E1B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC173ED11C0A88B100345E1B /* menorah-controller */,
+				FC173EEA1C0A88B100345E1B /* menorah-controllerTests */,
+				FC173EF51C0A88B100345E1B /* menorah-controllerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC173ED01C0A88B100345E1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC173EE51C0A88B100345E1B /* LaunchScreen.storyboard in Resources */,
+				FC173EE21C0A88B100345E1B /* Assets.xcassets in Resources */,
+				FC173EE01C0A88B100345E1B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC173EE91C0A88B100345E1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC173EF41C0A88B100345E1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC173ECE1C0A88B100345E1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC173EDD1C0A88B100345E1B /* ViewController.m in Sources */,
+				FC173EDA1C0A88B100345E1B /* AppDelegate.m in Sources */,
+				FC173ED71C0A88B100345E1B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC173EE71C0A88B100345E1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC173EF01C0A88B100345E1B /* menorah_controllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC173EF21C0A88B100345E1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC173EFB1C0A88B100345E1B /* menorah_controllerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC173EED1C0A88B100345E1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC173ED11C0A88B100345E1B /* menorah-controller */;
+			targetProxy = FC173EEC1C0A88B100345E1B /* PBXContainerItemProxy */;
+		};
+		FC173EF81C0A88B100345E1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC173ED11C0A88B100345E1B /* menorah-controller */;
+			targetProxy = FC173EF71C0A88B100345E1B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC173EDE1C0A88B100345E1B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC173EDF1C0A88B100345E1B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC173EE31C0A88B100345E1B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC173EE41C0A88B100345E1B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC173EFD1C0A88B100345E1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FC173EFE1C0A88B100345E1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC173F001C0A88B100345E1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "menorah-controller/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Wikia.menorah-controller";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FC173F011C0A88B100345E1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "menorah-controller/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Wikia.menorah-controller";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FC173F031C0A88B100345E1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "menorah-controllerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Wikia.menorah-controllerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/menorah-controller.app/menorah-controller";
+			};
+			name = Debug;
+		};
+		FC173F041C0A88B100345E1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "menorah-controllerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Wikia.menorah-controllerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/menorah-controller.app/menorah-controller";
+			};
+			name = Release;
+		};
+		FC173F061C0A88B100345E1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "menorah-controllerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Wikia.menorah-controllerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "menorah-controller";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		FC173F071C0A88B100345E1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "menorah-controllerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Wikia.menorah-controllerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "menorah-controller";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC173ECD1C0A88B100345E1B /* Build configuration list for PBXProject "menorah-controller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC173EFD1C0A88B100345E1B /* Debug */,
+				FC173EFE1C0A88B100345E1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC173EFF1C0A88B100345E1B /* Build configuration list for PBXNativeTarget "menorah-controller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC173F001C0A88B100345E1B /* Debug */,
+				FC173F011C0A88B100345E1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FC173F021C0A88B100345E1B /* Build configuration list for PBXNativeTarget "menorah-controllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC173F031C0A88B100345E1B /* Debug */,
+				FC173F041C0A88B100345E1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FC173F051C0A88B100345E1B /* Build configuration list for PBXNativeTarget "menorah-controllerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC173F061C0A88B100345E1B /* Debug */,
+				FC173F071C0A88B100345E1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC173ECA1C0A88B100345E1B /* Project object */;
+}
